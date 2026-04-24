@@ -15,7 +15,7 @@ jobs:
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
-        jav-vesrion: '17'
+        jav-version: '17'
         distribution: 'temurin'
         cache: Maven
       - name: Build with maven
