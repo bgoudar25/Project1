@@ -1,4 +1,13 @@
-jobs:
+permissions:
+  id-token: write
+  contents: read
+
+- name: Configure AWS Credentials (Account B)
+  uses: aws-actions/configure-aws-credentials@v4
+  with:
+    role-to-assume: arn:aws:iam::<ACCOUNT_B_ID>:role/GitHubActionsRole
+    aws-region: ap-south-1
+    jobs:
 
   terraform-dev:
     name: Deploy to DEV (Account A)
